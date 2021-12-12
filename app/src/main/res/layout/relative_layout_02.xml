@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+    2 - 1
+    특정 뷰 기준으로 배치 하는 방법
+
+    to_ , of 가 들어 가는 속성을 사용한다.
+ -->
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 기준뷰로 생각해보자 -->
+    <!-- 아래 설명 후 아이디 선언 -->
+    <TextView
+        android:id="@+id/view1"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        android:background="#fff12341" />
+
+
+    <!--
+        빨간색 뷰에 오른쪽으로 이동 하라. ( 빨간색 뷰를 어떻게 알 수 있을까?)
+        뷰에 이름을 부여 한더.
+        모든 뷰가 가지고 있은 id 속성
+        id 를 선언 (변수 선언)
+        id 를 사용 (변수 사용)
+     -->
+
+    <!-- 끝선 기준으로 이동하기 때문에 추가 적인 속성을 설정해 주어야 한다.
+         다양한 방법이 존재
+         android:layout_alignTop="@id/view1"
+         android:layout_centerInParent="true"
+
+         : 위에
+         android:layout_above="@id/view1"
+     -->
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+
+        android:layout_alignTop="@id/view1"
+        android:layout_toRightOf="@id/view1"
+        android:background="#DFC82B" />
+
+
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_toLeftOf="@id/view1"
+        android:background="#3E9F33" />
+
+
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_toRightOf="@id/view1"
+        android:background="@color/purple_200" />
+
+
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_above="@id/view1"
+        android:background="@color/purple_200" />
+
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/view1"
+        android:background="#518041" />
+
+    <!-- 부모 기준과 자식 기준 두가지를 사용 -->
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_toLeftOf="@id/view1"
+        android:layout_alignParentBottom="true"
+        android:background="#518041" />
+
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_toRightOf="@id/view1"
+        android:layout_alignParentBottom="true"
+        android:background="#518041" />
+
+
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_above="@id/view1"
+        android:layout_alignParentRight="true"
+        android:background="#518041" />
+
+
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/view1"
+        android:layout_alignParentRight="true"
+        android:background="#518041" />
+
+
+
+
+
+</RelativeLayout>
