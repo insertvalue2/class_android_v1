@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="top"
+    android:orientation="vertical">
+
+    <!-- LinearLayout 실습하기
+
+        1.
+        LinearLayout 2개 선언 : 방향은 수평
+        2. 첫번째 LinearLayout 에 자식 요소 추가 height 70dp
+        3. 두번째 LinearLayout 에 자식 요소 추가 height 50dp
+     -->
+
+
+    <!--
+        chrome color picker 안내
+    -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#125688"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingLeft="20dp"
+            android:text="← simple tabs"
+            android:textColor="#DFE8EF"
+            android:textSize="30dp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#125688"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="one"
+            android:textAllCaps="true"
+            android:textColor="#DFE8EF"
+            android:textStyle="bold" />
+
+
+        <TextView
+            style="@style/SIMPLE_TABS_TEXT"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="two"/>
+
+        <TextView
+            style="@style/SIMPLE_TABS_TEXT"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="three" />
+
+    </LinearLayout>
+
+    <!-- values 파일에 styles.xml 만들어서 공통 속성 정의 -->
+
+</LinearLayout>
+
+
+
+
+
+

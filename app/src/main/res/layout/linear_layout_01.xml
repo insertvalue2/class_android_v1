@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?><!-- LinearLayout
+    1.
+    자식 요소들의 배치 방향을
+    orientation 속성을 사용한다.
+    vertical -> 수직 방향 (세로)
+    horizontal -> 수평 방향 (가로)
+    MainActivity -> layout name 변경하기
+
+    2. 자식 뷰 컴포넌트들 중에 부모 레이아웃 요소에 따라서
+    사용할 수 있는 속성이 있다.
+    layout_gravity
+
+    3. gravity 설명 (LinearLayout  컴포넌트에서 속성 설명)
+    -> 자식 요소들을 일괄적으로 정렬 처리를 할 수 있다.
+
+    4. layout_gravity : 부모 요소에 정렬 속성이 있지만
+    개별적으로 정렬 설정을 할 수 있다.
+
+    : 같은 속성이 중복이 될 경우 범위가 작은 부분으로 적용 된다.
+
+ -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="right"
+    android:orientation="horizontal">
+
+    <!-- palette 보여 주기 (Attributes 탭 닫기) -->
+    <!-- Portrait, LandScape 설명  -->
+    <TextView
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="text1"
+        android:textColor="@color/purple_200"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+
+        <TextView
+            android:text="text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+
+</LinearLayout>

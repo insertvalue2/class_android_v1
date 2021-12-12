@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- LinearLayout
+    
+    어떤 컴포넌트든 기본적으로 width, height 기본적으로 속성이 
+    생기게 된다. 
+    
+    
+ -->
+<!--
+ 핸드폰 화면에 총 가로 길이를 꽉 채우겠다.
+ 핸드폰 화면에 총 세로 길이를 꽉 채우겠다.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <!--
+    width, height 속성 설명
+    300dp, 300dp
+
+    match_parent : 부모 컴포넌트의 크기만큼 꽉 채우겠다.
+
+    wrap_content : 컨텐츠 크기를 감쌀 수 있는 만큼
+    가로폭과 세로폭 크기만큼만 이 컴포너트에 크기를 사용하겠다.
+    -->
+   <ImageView
+       android:layout_width="300dp"
+       android:layout_height="300dp"
+       android:background="#ffffff"
+       />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="50dp"
+        android:background="#EDA1A1"
+        android:text="안녕하세요"
+        />
+
+
+</LinearLayout>

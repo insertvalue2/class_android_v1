@@ -1,0 +1,27 @@
+
+뷰 컴포넌트 대분류
+
+1. 부모가 될 수 있는 컴포넌트
+
+Design tab 에 Layouts, Containers 라고 보이는 부분들이
+부모 컨테이너가 될 수 있다 (보여주기)
+
+2. 자식만 될 수 있는 컴포넌트
+
+1 - 1
+LinerLayout (배치 관리자)
+자식 배치 방향을 정하는 속성
+orientation - vertical
+            - horizontal
+
+2 - 1
+자식 뷰 컴포넌트들은 부모 레이아웃 무엇인지에 따라서
+사용할 수 있는 속성을 추가로 가질 수 있다.
+
+layout_gravity - center
+               - bottom
+               - top
+               - .......
+
+
+
