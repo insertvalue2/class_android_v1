@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--
+        scr="" 이미지 경로
+        @ 경로를 의미하는 것 : android 폴더 구조가 복 잡하다.
+
+         중요한 점 :
+         저해상도
+         중간해상도
+         고해상도
+         이런 문제를 해결하기 위해서 px 대신 dp 를 사용한다.
+         그럼 이미지는 어떻게 해결 하는가?
+         300dp , 300dp
+         크기보이거나 작게 보일 일은 없다.
+
+         저해상도 핸드폰에 고해상도 보여줄 수도 없고 고해상도 이미지를 사용할 필요가 없다.
+         그럼 해결 방법은 같은 이미지들을 해상별로 준비를 해서 소스파일에 넣어둔다
+         그럼 앱이 핸드폰에 설치 될 때 알아서 핸드폰 사양에 맞게 설치가 된다.
+         3개나 만들어야 하나
+         도와주는 플러그인
+         shift + shift : plugins
+         drawable importer
+
+         :사용 불가 버전
+         https://github.com/Vincent-Loi/android-drawable-importer-intellij-plugin
+         https://thinkground.studio/android-drawable-importer-%EC%84%A4%EC%B9%98/
+         https://plugins.jetbrains.com/plugin/7658-android-drawable-importer/versions/stable
+
+
+         https://github.com/Skeaner/android-drawable-importer-intellij-plugin
+
+         // https://romannurik.github.io/AndroidAssetStudio/
+
+    -->
+
+    <ImageView
+        android:src="@drawable/ic_launcher_foreground"
+        android:layout_width="300dp"
+        android:layout_height="300dp"/>
+
+    <!-- scaleType 속성 설명 :
+        이미지가 표실 될 영역에 비율은 현대 1 : 1 비율이다.
+        하지만 전달 받은 이미지의 비율은 3 : 2 이미지 입니다.
+        -> 이미지 손실없이 맞출수 있는 방법은 없다.
+        해결책 1. 이미지가 표시될 영역에 사이즈를 3 : 2 비율로 조정한다.
+        해결책 2. 디자이너에게 이미지 비율을 3 : 2 맞춰서 전달 받는다.
+        해결책 3. 둘다 안되는 상황이라면 scaleType 속성을 사용한다.
+        결론 : 사용자가 업로드한 이미지를 보여줘야 하는 화면이라면
+               scaleType 속성을 반드시 사용하는것을 권장하고  그 속성의
+               선택은 centerCrop 로 하게되는 경우가 많다.
+     -->
+    <ImageView
+        android:background="@color/black"
+        android:scaleType="centerCrop"
+        android:src="@drawable/test1"
+        android:layout_width="300dp"
+        android:layout_height="300dp"/>
+
+</LinearLayout>
