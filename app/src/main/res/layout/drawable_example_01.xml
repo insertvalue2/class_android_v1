@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textSize="10dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/gradient_01"
+            android:gravity="center"
+            android:text="Android"
+            android:layout_width="50dp"
+            android:layout_height="50dp"/>
+
+        <TextView
+            android:textSize="10dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/solid_01"
+            android:gravity="center"
+            android:text="Android"
+            android:layout_width="50dp"
+            android:layout_height="50dp"/>
+
+        <TextView
+            android:textSize="10dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/solid_02"
+            android:gravity="center"
+            android:text="Android"
+            android:layout_width="50dp"
+            android:layout_height="50dp"/>
+
+        <TextView
+            android:textSize="10dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/stroke_01"
+            android:gravity="center"
+            android:text="Android"
+            android:layout_width="50dp"
+            android:layout_height="50dp"/>
+
+        <TextView
+            android:textStyle="italic"
+            android:textColor="#9F3725"
+            android:textSize="10dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/radius_01"
+            android:gravity="center"
+            android:text="Android"
+            android:layout_width="50dp"
+            android:layout_height="50dp"/>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Button" />
+
+    <!--
+        theme 에 정의된 button 기본속성 material style
+        이고 custom 속성을 사용할 수 없다면
+        AppCompatButton 을 사용한다.
+    -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="120dp"
+        android:layout_height="80dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/gradient_01"
+        android:text="Button" />
+
+    <!--
+        vector 이미지 설명
+        vector asset 생성 방법
+    -->
+    <Button
+        android:id="@+id/textButton"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Text button" />
+
+    <Button
+        style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Text button"
+        app:icon="@drawable/ic_baseline_add_24" />
+
+    <com.google.android.material.button.MaterialButtonToggleGroup
+        android:id="@+id/toggleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/button1"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Button 1" />
+
+        <Button
+            android:id="@+id/button2"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Button 2" />
+
+        <Button
+            android:id="@+id/button3"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Button 3" />
+    </com.google.android.material.button.MaterialButtonToggleGroup>
+
+    <CheckBox
+        android:gravity="center"
+        android:id="@+id/icon"
+        android:paddingStart="8dp"
+        android:text="구독"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:button="@drawable/ic_baseline_favorite_border_24"
+        app:buttonTint="@android:color/black"/>
+
+</LinearLayout>

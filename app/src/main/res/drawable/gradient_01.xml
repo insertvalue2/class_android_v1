@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+<!--    <gradient-->
+<!--        android:centerColor="#ffffff"-->
+<!--        android:endColor="#ffffff"-->
+<!--        android:startColor="#ffffff"/>-->
+
+    <!-- 수직으로 되어 있다
+          angle 부분을 사용해서 회전시킬 수 있다.
+    -->
+    <gradient
+        android:angle="90"
+        android:centerColor="#7E5252"
+        android:endColor="#CAAEAE"
+        android:startColor="#B52121"/>
+
+</shape>
+    <!--
+    간단한 이미지는 직접 개발자가 그림을 그릴 수 있다.
+    앱 성능에 있어서도 도움이 된다.
+    단 자동차 같은 복잡한 이미지는 그릴 수 없다.
+
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android 가 쓰여 있는 옵션을 사용할려면 지정해줘야 한다.
+
+    : 신텍스 에러가 나온다
+
+    res / drawable -> drawable resource file 선택
+    -->

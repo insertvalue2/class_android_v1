@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+    story board 방식 보여 주기
+-->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 1. 정가운데로 위치 시키기 -->
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@color/black"
+        android:gravity="center"
+        android:text="android1"
+        android:textColor="@color/purple_200"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 2. 부모 기준으로 필요한 만큼만 제약 주기 -->
+    <TextView
+        android:id="@+id/tv_android2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="56dp"
+        android:layout_marginTop="66dp"
+        android:background="@color/black"
+        android:gravity="center"
+        android:text="android2"
+        android:textColor="@color/purple_200"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 3. 특정 뷰 기준으로 제약 주기  -->
+    <TextView
+        android:id="@+id/tv_android3"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="24dp"
+        android:background="@color/black"
+        android:gravity="center"
+        android:text="android3"
+        android:textColor="@color/purple_200"
+        app:layout_constraintStart_toEndOf="@id/tv_android2"
+        app:layout_constraintTop_toTopOf="@id/tv_android2" />
+
+    <!-- 4. 특정 뷰 기준 활용  -->
+    <TextView
+        android:id="@+id/tv_android4"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/black"
+        android:gravity="center"
+        android:text="android4"
+        android:textColor="@color/purple_200"
+        app:layout_constraintEnd_toEndOf="@id/tv_android3"
+        app:layout_constraintStart_toStartOf="@id/tv_android2"
+        app:layout_constraintTop_toBottomOf="@id/tv_android2" />
+
+    <!-- 5. 체인 개념을 꼭 알자
+         chainStyle - packed, spread, spread-inside
+         pack 모드일경우
+         bias - 0 ~ 1 ( 0. 5 ) 가운데
+     -->
+    <TextView
+        android:layout_marginBottom="50dp"
+        android:id="@+id/tv_android5"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@color/black"
+        android:gravity="center"
+        android:text="android5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        android:textColor="@color/purple_200"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintEnd_toStartOf="@id/tv_android6"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_android6"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@color/black"
+        android:gravity="center"
+        android:text="android6"
+        android:textColor="@color/purple_200"
+        app:layout_constraintEnd_toStartOf="@id/tv_android7"
+        app:layout_constraintStart_toEndOf="@id/tv_android5"
+        app:layout_constraintTop_toTopOf="@id/tv_android5" />
+
+    <TextView
+        android:id="@+id/tv_android7"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@color/black"
+        android:gravity="center"
+        android:text="android7"
+        android:textColor="@color/purple_200"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_android6"
+        app:layout_constraintTop_toTopOf="@id/tv_android5" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
