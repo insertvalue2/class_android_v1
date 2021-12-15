@@ -4,5 +4,7 @@
     <string name="rovers">Rovers</string>
     <string name="flights">Flights</string>
     <string name="dca">DCA</string>
-    <string name="mars">MARS</string>
+    <string name="mars">Mars</string>
+    <string name="text_label_1">Page 1</string>
+    <string name="text_label_2">Page 2</string>
 </resources>

@@ -1,32 +1,53 @@
+// shift + shift plugins 와 같은 기능입니다.
+// 기본적으로 기능이 더 필요할 때 이 문법을 사용할 수 있습니다.
+// 우리가 원하는 라이브러를 찾았을 때 설치 하는 방법을 소개 해주는
+// 페이지가 있습니다. 그 페이지에서 사용 방법을 안내되어 있습니다.
+// plugins 인 방식으로 사용하게 설계된 것들도 있고
+// 아래에 dependencies 를 이용해서 가지고 올 수 도 있습니다.
+
 plugins {
     id 'com.android.application'
 }
 
 android {
     compileSdk 31
+    // 컴파일 -> 기계어 SDK 버전 키켓
+    // 우리가 앱을 다 만들었을 때 SDK 버전 기준으로 컴파일 하겠다 의미 입니다.
 
+    // 빌드는 주석 및 로그 부분들 처럼 불 필요한 부분을 다 지우는 과정이라고 생각
+    // 하면 됩니다.
+    // 실제로 앱을 킬 때는 빌드가 되고 컴파일이 됩니다.
     defaultConfig {
         applicationId "com.nomadlab.myappone"
         minSdk 24
         targetSdk 31
+        // 숫자로 항상 올라 가야 됩니다.
+        // 앱 업데이트 시에 사용 합니다.
         versionCode 1
         versionName "1.0"
-
+        // 테스트 코드를 실행할 수 있는 AndroidJUnitRunner 테스트 코드를 사용하겠다
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    // buildToolsVersion --> 컴파일은 최종 단계를 의미하고
+    // 배포할 목적으로 배포
+    // 디버그 목적으로 배포 할 수 있습니다.
     buildTypes {
         release {
             minifyEnabled false
+            // 난독화 입니다.
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    // JDK 8 버전에 의존하고 있는 라이브러들을 있을 때
+    // 사용하게 되는 부분 입니다.
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
 }
 
+// 우리 앱 안에서 사용하고 있는 라이브러리들을 가지고 오고 확인 가능 하다.
 dependencies {
 
     implementation 'androidx.appcompat:appcompat:1.4.0'
@@ -37,4 +58,6 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
     implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
 }

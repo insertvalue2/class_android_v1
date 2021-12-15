@@ -19,3 +19,6 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+
+# 우리가 작성한 코드 중에 중요한 부분이 프로젝트에 있을 때
+# 앱에서 알아볼 수 없에 난독화 처리를 할 때 사용합니다.
